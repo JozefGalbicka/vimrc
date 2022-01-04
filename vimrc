@@ -22,4 +22,22 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Wildmenu for commands
 set wildmenu
-set wildmode=longest:list,full
+set wildmode=list:longest
+
+" Hide buffer
+set hidden
+
+" New line with same indentation on undefinied file types
+set autoindent
+
+" Add number column
+set number
+
+" Highlight cursor line
+set cursorline
+
+" Interactive search
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
