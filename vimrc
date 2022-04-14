@@ -9,7 +9,12 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
+
+set encoding=utf-8
 
 " Colorscheme
 set background=dark
@@ -41,3 +46,6 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+
+" Snippets autocomplete"
+let g:UltiSnipsExpandTrigger="<c-space>"
