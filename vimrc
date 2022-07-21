@@ -5,6 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 " Just some plugins
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -12,6 +13,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Yggdroot/indentLine'
+Plug 'Einenlum/yaml-revealer'
 call plug#end()
 
 set encoding=utf-8
