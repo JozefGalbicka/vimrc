@@ -52,3 +52,6 @@ set hlsearch
 
 " Snippets autocomplete"
 let g:UltiSnipsExpandTrigger="<c-space>"
+
+" Disable auto-indent when commenting lines in yaml files
+autocmd FileType yaml,yaml.ansible set indentkeys-=0#
