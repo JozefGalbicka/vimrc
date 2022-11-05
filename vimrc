@@ -14,7 +14,6 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'Yggdroot/indentLine'
 Plug 'Einenlum/yaml-revealer'
 call plug#end()
 
