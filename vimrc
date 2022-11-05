@@ -5,7 +5,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
 " Just some plugins
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -21,10 +20,13 @@ let g:Hexokinase_highlighters = ['backgroundfull']
 
 set encoding=utf-8
 
-" Colorscheme
 " https://wiki.archlinux.org/title/St#Vim
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let g:airline_symbols = {}
+let g:airline_symbols.linenr = ' ln:'
+
+" Colorscheme
 set background=dark
 colorscheme gruvbox
 syntax on
