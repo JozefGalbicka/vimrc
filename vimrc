@@ -13,16 +13,23 @@ Plug 'vim-airline/vim-airline'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'Yggdroot/indentLine'
 Plug 'Einenlum/yaml-revealer'
 call plug#end()
 
+let g:Hexokinase_highlighters = ['backgroundfull']
+
 set encoding=utf-8
 
 " Colorscheme
+" https://wiki.archlinux.org/title/St#Vim
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 colorscheme gruvbox
 syntax on
+set termguicolors 
 
 " Make .yml files to indent 1Tab=2Spaces
 filetype plugin indent on
