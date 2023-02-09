@@ -17,6 +17,9 @@ Plug 'Einenlum/yaml-revealer'
 Plug 'elkowar/yuck.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
 
 let g:Hexokinase_highlighters = ['backgroundfull']
@@ -87,10 +90,15 @@ endfunction
 let mapleader = ","
 inoremap kj <Esc>
 
-" FZF shortcuts
+" fzf
 nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>l :Lines<cr>
 nnoremap <Leader>a :Buffers<cr>
 
 nnoremap  <silent> <Leader><Tab>    :bnext<CR> 
 nnoremap  <silent> <Leader><S-Tab>  :bprevious<CR>
+
+" NERDTree 
+nnoremap <C-n> :NERDTreeToggle<cr>
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
