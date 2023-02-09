@@ -43,6 +43,9 @@ set wildmode=list:longest
 " Hide buffer
 set hidden
 
+" Show partial command 
+set showcmd
+
 " New line with same indentation on undefinied file types
 set autoindent
 
@@ -63,3 +66,17 @@ let g:UltiSnipsExpandTrigger="<c-space>"
 
 " Disable auto-indent when commenting lines in yaml files
 autocmd FileType yaml,yaml.ansible set indentkeys-=0#
+
+" Paste without :set paste
+" https://stackoverflow.com/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim
+" https://cirw.in/blog/bracketed-paste
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
