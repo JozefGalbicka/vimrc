@@ -12,7 +12,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'Einenlum/yaml-revealer'
 call plug#end()
 
 set encoding=utf-8

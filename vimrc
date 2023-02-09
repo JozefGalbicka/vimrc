@@ -14,6 +14,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'Einenlum/yaml-revealer'
+Plug 'elkowar/yuck.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 let g:Hexokinase_highlighters = ['backgroundfull']
@@ -80,3 +83,14 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+let mapleader = ","
+inoremap kj <Esc>
+
+" FZF shortcuts
+nnoremap <Leader>f :Files<cr>
+nnoremap <Leader>l :Lines<cr>
+nnoremap <Leader>a :Buffers<cr>
+
+nnoremap  <silent> <Leader><Tab>    :bnext<CR> 
+nnoremap  <silent> <Leader><S-Tab>  :bprevious<CR>
