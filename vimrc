@@ -34,7 +34,7 @@ let g:airline_symbols.linenr = ' ln:'
 
 " Colorscheme
 set background=dark
-colorscheme gruvbox
+silent! colorscheme gruvbox
 syntax on
 set termguicolors 
 
@@ -100,5 +100,6 @@ nnoremap  <silent> <Leader><S-Tab>  :bprevious<CR>
 
 " NERDTree 
 nnoremap <C-n> :NERDTreeToggle<cr>
+nnoremap <Leader>t :NERDTreeFocus<cr>
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif

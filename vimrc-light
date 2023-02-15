@@ -24,7 +24,7 @@ let g:airline_symbols.linenr = ' ln:'
 
 " Colorscheme
 set background=dark
-colorscheme gruvbox
+silent! colorscheme gruvbox
 syntax on
 
 " Make .yml files to indent 1Tab=2Spaces
