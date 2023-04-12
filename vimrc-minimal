@@ -12,7 +12,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'preservim/nerdtree'
 call plug#end()
 
 set encoding=utf-8
@@ -70,9 +69,3 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
-
-" NERDTree 
-nnoremap <C-n> :NERDTreeToggle<cr>
-nnoremap <Leader>t :NERDTreeFocus<cr>
-" Close the tab if NERDTree is the only window remaining in it.
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
