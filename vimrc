@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
@@ -22,6 +22,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'hashivim/vim-terraform'
 Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+Plug 'markonm/traces.vim'
 call plug#end()
 
 let g:Hexokinase_highlighters = ['backgroundfull']
@@ -92,10 +95,19 @@ endfunction
 let mapleader = ","
 inoremap kj <Esc>
 
+" Tabulator
+if exists(":Tabularize")
+  nmap <Leader>s= :Tabularize /=<CR>
+  vmap <Leader>s= :Tabularize /=<CR>
+  nmap <Leader>s: :Tabularize /:\zs<CR>
+  vmap <Leader>s: :Tabularize /:\zs<CR>
+endif
+
 " fzf
 nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>l :Lines<cr>
 nnoremap <Leader>a :Buffers<cr>
+nnoremap <Leader>r :Rg<cr>
 
 nnoremap  <silent> <Leader><Tab>    :bnext<CR> 
 nnoremap  <silent> <Leader><S-Tab>  :bprevious<CR>
