@@ -105,3 +105,8 @@ nnoremap <C-n> :NERDTreeToggle<cr>
 nnoremap <Leader>t :NERDTreeFocus<cr>
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
