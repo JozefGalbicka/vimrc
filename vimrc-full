@@ -25,6 +25,7 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'markonm/traces.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 let g:Hexokinase_highlighters = ['backgroundfull']
