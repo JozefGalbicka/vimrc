@@ -1,4 +1,4 @@
 " Choose your flavor
-"import vimrc-minimal
-import vimrc-light
-"import vimrc-full
+"source $HOME/.vim/vimrc-minimal
+source $HOME/.vim/vimrc-light
+"source $HOME/.vim/vimrc-full
