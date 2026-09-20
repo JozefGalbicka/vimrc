@@ -1,4 +1,4 @@
-" Light version of a original vimrc file
+" Minimal version of a original vimrc file
 
 " Install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -69,3 +69,9 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+" Window navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
