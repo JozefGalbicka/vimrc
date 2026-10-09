@@ -31,6 +31,9 @@ syntax on
 filetype plugin indent on
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Recognize Podman Quadlet files as systemd units
+autocmd BufRead,BufNewFile *.container,*.volume,*.pod,*.kube,*.build,*.image,*.artifact,*.network setfiletype systemd
+
 " Wildmenu for commands
 set wildmenu
 set wildmode=list:longest
